@@ -10,16 +10,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var cors = require('cors');
 app.use(cors());
+
 //models
 const User = require('./models/user');
+const Message = require('./models/messages')
 
 //routes
 const userRoutes = require('./routes/user');
 app.use('/user',userRoutes);
+const messageRoutes = require('./routes/messages');
+app.use('/message', messageRoutes);
 
 
-
-
+//relationships
+User.hasMany(Message);
+Message.belongsTo(User);
 
 
 
