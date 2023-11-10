@@ -17,7 +17,7 @@ function checkUserdetails(event){
                 
                 localStorage.setItem('token',response.data.token)
                 
-                // window.location.href ="../expense/expense.html";
+                window.location.href ="../chatpage/chatpage.html";
                
             }
             if(response.status===201){document.getElementById('login-alert').innerHTML = response.data.message}
