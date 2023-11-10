@@ -22,6 +22,8 @@ app.use('/user',userRoutes);
 
 
 
+
+
 sequelize.sync().then(() =>{
     app.listen(process.env.PORT || 4000);
 }).catch(err =>{
