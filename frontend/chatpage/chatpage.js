@@ -17,3 +17,14 @@ function savetodatabase(){
         console.log("!!!error in adding message!!!")
     })
 }
+
+window.addEventListener("DOMContentLoaded",()=>{
+    const token =localStorage.getItem('token')
+    axios.get("http://localhost:4000/message/get-messages", {headers :{"Authorization" : token}}).
+    then((res)=>{
+        console.log("these are messages",res.data.messages)
+    })
+    .catch(err=>{
+        console.log("unable to get all users",err)
+    })
+})

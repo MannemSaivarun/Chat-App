@@ -18,3 +18,15 @@ exports.addMessage = async(req,res,next)=>{
     }
     
 }
+
+exports.getMessages = async(req,res,next)=>{
+    try {
+        console.log("user is ",req.user.id);
+        const messages = await Message.findAll({where :{userId : req.user.id}})
+        console.log("messages",messages)
+        res.status(200).json({messages: messages});
+    } catch (error) {
+        console.log("error at getting all categories")
+        res.status(500).json({error: error})   
+    }
+}

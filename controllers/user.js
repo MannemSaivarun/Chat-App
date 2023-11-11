@@ -10,6 +10,7 @@ function isstringinvalid(string){
         return false
     }
 }
+//<---------signup------------->
 exports.addUser = async (req,res,next)=>{
         try {
             console.log('path is called', req.body);
