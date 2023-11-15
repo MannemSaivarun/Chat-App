@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <a href="../groupchat/groupchat.html">back</a>
+        <button id="signOut">SignOut</button>
+
+   <!-- adding members to group -->
+        <div class="add-people">
+            <h4>Add to Group</h4>
+            <input type="email" id="emailId" placeholder="Enter Email">
+            <select name="" id="adminvalue">
+                <option value="false">admin:false</option>
+                <option value="true">admin:true</option>
+            </select>
+            <button id="add-to-group">Add Participant</button>
+        </div>
+    <!-- list of grp participants -->
+        <div class="listofparticipants">
+            
+            <h4>Participants in the Group are: </h4>
+            <div class="grpparticipants"></div>
+        </div>
+    <!-- grp messages -->
+        <div class="group-msgs">
+            <h4>Group Chat</h4>
+            <div class="all-msgs"></div>
+        </div>  
+    
+        <div class="msg">
+            <input type="text" id="input-text">
+            <button class="sendmsg">Send</button>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="groupdetails.js"></script>
+</body>
+</html>

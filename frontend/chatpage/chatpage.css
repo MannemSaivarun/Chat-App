@@ -2,11 +2,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    
   }
 .container{
-    margin-left: 600px;
+    /* margin-left: 600px; */
     padding-top: 10px;
     font-size:xx-large;
+    
+}
+.container h{
+  top: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 600px;
+  position: fixed;
+  background-color: #21325e;
+  width: 100%;
+  color: aliceblue;
+}
+
+#list-of-messages{
+  padding-top: 15px;
+  margin-bottom: 60px;
+  padding-left: 500px;
 }
 .input-bar {
     border-top: 1px solid #21325e;
